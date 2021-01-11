@@ -1,3 +1,3 @@
 $(document).ready(function(){
-    $("#text").css("display", "contents");
+    $("#text").show();
 })
