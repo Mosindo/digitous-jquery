@@ -1,9 +1,13 @@
-$(document).ready(function () {
-        if ($('input').val().length > 5) {
-            $('input').addClass("is-invalid")
-            $('input[type=text]').val("5 caratères requis ");
+$(document).ready(function() {
+    $("input").keyup(function() {
+        var value = $("input").val();
+        if (value.length > 5) {
+            $("input").removeClass("is-invalid")
+            $("input").addClass("is-valid")
         } else {
-            $('input').keyup("5 caratères requis ")
+            $("input").addClass("is-invalid")
         }
-    })
+    });
+});
+
 
