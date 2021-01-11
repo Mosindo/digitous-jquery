@@ -3,9 +3,10 @@ $(document).ready(function () {
         if ($('input').val().length < 5) {
             $('input').addClass("is-invalid")
             $('input[type=text]').val("5 caratères requis ");
-        } else {
-            // $('input[type=text].sitebg').val('000000');
-
-        }
+            } 
+            else if($('input').val().length > 5){
+            $('input').addClass("is-valid");
+            $('input[type=text]').val("plus de 5 caratères  ");
+            }
     })
 })
