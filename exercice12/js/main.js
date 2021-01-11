@@ -1,7 +1,8 @@
-$(document).ready(function(){function squareWidth(){
+$(document).ready(function(){
+    function squareWidth(){
     $("#square").css("width", "500px")
  };
-$(".btn").click(function(){
+    $(".btn").click(function(){
     squareWidth();
-} )
+    })
 })

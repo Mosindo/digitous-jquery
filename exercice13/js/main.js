@@ -1,6 +1,8 @@
-function redColor(){
-    $("#square").css("background-color", "red")
- };
-$(".btn").click(function(){
-    redColor();
-} )
+$(document).ready(function(){
+    function text(){
+        $("#text").css("fontSize", "50px")
+        };
+        $(".btn").click(function(){
+        text();
+        })
+})
