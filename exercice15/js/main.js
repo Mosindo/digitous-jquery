@@ -1,6 +1,6 @@
 $(document).ready(function(){
     function text(){
-        $("p #text").addClass("class").css("float","right");
+        $("#text").addClass("float-right").css("float","right");
         };
 
         $(".btn").click(function(){
