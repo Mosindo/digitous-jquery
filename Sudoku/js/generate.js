@@ -1,3 +1,4 @@
+$(document).ready(function () {
 var sudoku = [
     [3, 9, 1, 2, 8, 5, 7, 4, 6],
     [5, 4, 6, 9, 3, 7, 2, 1, 8],
@@ -63,20 +64,25 @@ var allSudoku = [
     "3....2..94....3......8.....7.34..2...8..2......5....9.91.......8.................",
 ];
 
-function generateSudoku() {
-    var randomline = (Math.floor(Math.random() * allSudoku.length))
-    var index = 0;
-    for (var i = 0; i < 9; i++) {
-        for (var j = 0; j < 9; j++) {
-            sudoku[i][j] = allSudoku[randomline][index];
-            index++;
-            if (sudoku[i][j] === ".") {
-                sudoku[i][j] = " ";
-            }
-            // affichera l'élément ligne i, colonne j de votre sudoku
-        }
-    }
-    console.log(sudoku.join('\n'))
-}
 
-generateSudoku()
+    function generateSudoku() {
+        var randomline = (Math.floor(Math.random() * allSudoku.length))
+        var index = 0;
+        for (var i = 0; i < 9; i++) {
+            for (var j = 0; j < 9; j++) {
+                sudoku[i][j] = allSudoku[randomline][index];
+                index++;
+                if (sudoku[i][j] === ".") {
+                    sudoku[i][j] = " ";
+                }
+                $(".test").html(`<div class="row">
+                <div class="col-9">${sudoku[i][j]}</div></div`).css( )
+                // affichera l'élément ligne i, colonne j de votre sudoku
+            }
+        }
+        //console.log(sudoku.join('\n'))
+    }
+
+    generateSudoku()
+       
+    });

@@ -3,8 +3,7 @@
  * Secondary color: #FFFFFF
  */
 
-.col{
-    
+.col-9{
     width: 50px;
     height: 50px;
     background-color: red;
@@ -12,5 +11,5 @@
 }
 
 .row{
- 
+ height: 50px;
 }
