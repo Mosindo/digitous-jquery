@@ -62,18 +62,21 @@ var allSudoku = [
     "....58.......46.......3.6..9...........4.....3..8.........8...3....91.8.7...2....",
     "3....2..94....3......8.....7.34..2...8..2......5....9.91.......8.................",
 ];
-var randomline = 0;
-var randomline = (Math.floor(Math.random() * allSudoku.length))
-var index = 0;
-for (var i = 0; i < 9; i++) {
-    for (var j = 0; j < 9; j++) {
-       
-        sudoku[i][j] = allSudoku[randomline][index];
-        index++;
-        if(sudoku[i][j]==="."){
-            sudoku[i][j] = " ";
+
+function generateSudoku() {
+    var randomline = (Math.floor(Math.random() * allSudoku.length))
+    var index = 0;
+    for (var i = 0; i < 9; i++) {
+        for (var j = 0; j < 9; j++) {
+            sudoku[i][j] = allSudoku[randomline][index];
+            index++;
+            if (sudoku[i][j] === ".") {
+                sudoku[i][j] = " ";
+            }
+            // affichera l'élément ligne i, colonne j de votre sudoku
         }
-        // affichera l'élément ligne i, colonne j de votre sudoku
     }
+    console.log(sudoku.join('\n'))
 }
-console.log(sudoku.join('\n'))
+
+generateSudoku()
