@@ -8,13 +8,7 @@ var sudoku = [
     [1, 5, 2, 7, 9, 8, 3, 6, 4],
     [9, 8, 7, 3, 4, 6, 5, 2, 1],
     [4, 6, 3, 1, 5, 2, 8, 7, 9]
-     ]
-
-     for (var i = 0; i < 9; i++) {
-        for (var j = 0; j < 9; j++) {
-            console.log( `${sudoku[i][j]}`) // affichera l'élément ligne i, colonne j de votre sudoku
-	}
-}
+]
 
 var allSudoku = [
     "....7..4..28...617.......9...................2.6..4..51826...73394....56765......",
@@ -67,5 +61,19 @@ var allSudoku = [
     "7...5...........7.1...9..8..........5.7.8.......4....2....1.39..1.92.............",
     "....58.......46.......3.6..9...........4.....3..8.........8...3....91.8.7...2....",
     "3....2..94....3......8.....7.34..2...8..2......5....9.91.......8.................",
-  ];
+];
+var randomline = 0;
+var randomline = (Math.floor(Math.random() * allSudoku.length))
+var index = 0;
+for (var i = 0; i < 9; i++) {
+    for (var j = 0; j < 9; j++) {
+        sudoku[i][j] = allSudoku[randomline][index];
+        index++;
 
+        // affichera l'élément ligne i, colonne j de votre sudoku
+    }
+
+
+}
+
+console.log(sudoku.join('\n'))

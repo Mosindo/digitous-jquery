@@ -1,0 +1,16 @@
+/**
+ * Main color: #0475ba
+ * Secondary color: #FFFFFF
+ */
+
+.col{
+    
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: solid;
+}
+
+.row{
+ 
+}
