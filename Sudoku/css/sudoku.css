@@ -3,13 +3,23 @@
  * Secondary color: #FFFFFF
  */
 
-.col-9{
+.container{
+    margin-top: 100px ;
+    display: flex;
+    justify-content: center;
+
+}
+h1{
+    text-align: center;
+}
+.col-2{
     width: 50px;
     height: 50px;
     background-color: red;
-    border: solid;
+    border: solid 1px;
 }
 
-.row{
+{
  height: 50px;
+ border: solid;
 }

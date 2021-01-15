@@ -74,15 +74,31 @@ var allSudoku = [
                 index++;
                 if (sudoku[i][j] === ".") {
                     sudoku[i][j] = " ";
-                }
-                $(".test").html(`<div class="row">
-                <div class="col-9">${sudoku[i][j]}</div></div`).css( )
+                } 
+                
+                
+
                 // affichera l'élément ligne i, colonne j de votre sudoku
             }
         }
-        //console.log(sudoku.join('\n'))
+        //console.log(sudoku.join('\n'));
     }
-
-    generateSudoku()
-       
+        var grid= "";
+        var r="<div class='row'>";
+        var col= "<div class='col-2'>";
+        var div ="</div>";
+    function displaysoduku(){
+        sudoku
+        for (var i= 0; i< 9; i++) {
+            for (var j= 0; j< 9; j++){
+            grid+=col+sudoku[i][j]+div;
+            console.log(grid);
+            }
+        }
+        $(".test").html(grid);
+    }
+    
+    generateSudoku();
+    displaysoduku()
+    //console.log(sudoku) ;
     });
