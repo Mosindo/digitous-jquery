@@ -1,4 +1,3 @@
-$(document).ready(function () {
 var sudoku = [
     [3, 9, 1, 2, 8, 5, 7, 4, 6],
     [5, 4, 6, 9, 3, 7, 2, 1, 8],
@@ -65,40 +64,35 @@ var allSudoku = [
 ];
 
 
-    function generateSudoku() {
-        var randomline = (Math.floor(Math.random() * allSudoku.length))
-        var index = 0;
-        for (var i = 0; i < 9; i++) {
-            for (var j = 0; j < 9; j++) {
-                sudoku[i][j] = allSudoku[randomline][index];
-                index++;
-                if (sudoku[i][j] === ".") {
-                    sudoku[i][j] = " ";
-                } 
-                
-                
+function generateSudoku() {
+    var randomLine = Math.floor(Math.random() * allSudoku.length);
+    console.log(allSudoku[randomLine]);
 
-                // affichera l'élément ligne i, colonne j de votre sudoku
-            }
+    var index = 0;
+    for (var i = 0; i < 9; i++) {
+        for (var j = 0; j < 9; j++) {
+            sudoku[i][j] = allSudoku[randomLine][index];
+            index++;
         }
-        //console.log(sudoku.join('\n'));
     }
-        var grid= "";
-        var r="<div class='row'>";
-        var col= "<div class='col-2'>";
-        var div ="</div>";
-    function displaysoduku(){
-        sudoku
-        for (var i= 0; i< 9; i++) {
-            for (var j= 0; j< 9; j++){
-            grid+=col+sudoku[i][j]+div;
-            console.log(grid);
-            }
-        }
-        $(".test").html(grid);
-    }
-    
-    generateSudoku();
-    displaysoduku()
-    //console.log(sudoku) ;
-    });
+
+    console.log(sudoku);
+}
+
+$(document).ready(function () {
+
+            $("button").click(function () {
+                    generateSudoku();
+                    var sudokuHtml = '<div class="container">';
+                    for (var i = 0; i < 9; i++) {
+                        sudokuHtml += `<div id="row${i}" class="row">`;
+                        for (var j = 0; j < 9; j++) {
+                            sudokuHtml += `<div id="col${j}" class="col-1 case">${sudoku[i][j]}</div>`;
+                        }
+                        sudokuHtml += '</div>';
+                    }
+                    sudokuHtml += '</div>';
+
+                    $("#sudoku").html(sudokuHtml);
+                })
+            })

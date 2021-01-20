@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="élaboration d'un generateur de sudoku">
@@ -8,14 +9,19 @@
     <link rel="stylesheet" href="./css/sudoku.css" />
     <title>Sudoku generator</title>
 </head>
-<body>
-    <h1>Sudoku</h1>
-    <div class="container ">
-        <div class="row col-4 test "></div>
 
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content ">
+        <h1>Sudoku</h1>
+        <div id="sudoku"></div>
+        <button class="btn btn-success">Display Sudoku</button>
     </div>
-    
-      <script src="./../assets/js/jquery-3.3.1.min.js"></script>
-      <script src="./js/generate.js"></script>
+
+    <script src="./../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./js/generate.js"></script>
 </body>
+
 </html>
